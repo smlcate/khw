@@ -1,0 +1,17 @@
+{
+  "name": "hbf",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sam Cate",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "node": "^12.6.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

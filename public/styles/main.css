@@ -1,0 +1,61 @@
+body {
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+#mainHeader {
+  margin-left: -10px;
+  margin-top: -10px;
+  /* height: 110px; */
+  width: 100vw;
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+#mainHeaderTopDiv{
+  background: url('../images/Tb3g7Fv.jpg');
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size:cover;
+  padding: 10px;
+  height: 120px;
+  color: white;
+ }
+ #mainHeaderTopDiv img {
+   /* height: 100px;
+   width: 100px; */
+ }
+ #mainHeaderLogo {
+   height: 110px;
+   width:110px;
+ }
+ #mainHeaderTitleImg {
+   height: 70px;
+   margin-left: 40px;
+   /* width: 600px; */
+ }
+ #headerTitle {
+   padding-left: 30px;
+   font-size: 150%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 80px;
+ }
+ #headerTitle h2 {
+   border-bottom: 2px solid white;
+
+ }
+ #mainHeaderPageNav {
+   height: 40px;
+   border-top: 2px solid black;
+   background: #3f51b5;
+   /* background: url('../images/dark-oak-wood-grain-chipboard-4k-2160p-uhd-panning-footage-dark-texture-lin_ej9rjkv5l__F0000.png');
+   background-position: center;
+   background-size:contain; */
+ }
