@@ -1,42 +1,53 @@
 body {
-  /* width: 100vw; */
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  margin: 0px;
+  background: #D9E0DF;
+  font-family: optima;
+  /* display: flex;
+  justify-content: center; */
 }
 #mainHeader {
-  margin-left: -10px;
-  margin-top: -10px;
+  /* margin-left: -10px; */
+  /* margin-top: -10px; */
   /* height: 110px; */
   width: 100vw;
-  /* background: blue; */
+  background: url("../images/interlock-reclaimed-barnwood-b.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.5);
+
+
 
 }
 #mainHeaderTopDiv{
-  background: url('../images/Tb3g7Fv.jpg');
+  /* background: rgba(276, 174, 153, 0.4); */
+
   display: flex;
   align-items: center;
   background-position: center;
   background-size:cover;
   padding: 10px;
-  height: 120px;
+  /* height: 90px; */
   color: white;
  }
- #mainHeaderTopDiv img {
-   /* height: 100px;
-   width: 100px; */
- }
+ /* #mainHeaderTopDiv img {
+   height: 100px;
+   width: 100px;
+ } */
  #mainHeaderLogo {
-   height: 110px;
-   width:110px;
+   height: 80px;
+   width:80px;
  }
  #mainHeaderTitleImg {
-   height: 70px;
+   height: 50px;
    margin-left: 40px;
-   /* width: 600px; */
+   /* width: 400px; */
  }
  #headerTitle {
    padding-left: 30px;
@@ -53,9 +64,66 @@ body {
  }
  #mainHeaderPageNav {
    height: 40px;
-   border-top: 2px solid black;
-   background: #3f51b5;
-   /* background: url('../images/dark-oak-wood-grain-chipboard-4k-2160p-uhd-panning-footage-dark-texture-lin_ej9rjkv5l__F0000.png');
+   /* border-top: 2px solid #D9E0DF; */
+   background: #616F89;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   /* background: ur
+   l('../images/dark-oak-wood-grain-chipboard-4k-2160p-uhd-panning-footage-dark-texture-lin_ej9rjkv5l__F0000.png');
    background-position: center;
    background-size:contain; */
+ }
+ #mainHeaderPageNav a {
+   padding: 5 30 5 30px;
+   text-decoration: none;
+   color: white;
+   font-size: 140%;
+ }
+
+.mainPageDivs {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ #aboutPageStoreInfoDiv {
+   background: url("../images/1100492-b-1024x683.jpg");
+   background-position:center;
+   background-size: cover;
+   width: 90vw;
+   height: 400px;
+   min-width: 500px;
+   display: flex;
+ }
+ .aboutPageContentDivTextContainers {
+   padding: 20px;
+   display: flex;
+   flex-direction:  column;
+   width: 50%;
+   color: white;
+   font-weight: bolder;
+   /* background: rgba(97, 111, 137, 0.9); */
+ }
+ #aboutPageStoreInfoContentTextContainer {
+   background: rgba(97, 111, 137, 0.7);
+   font-size: 140%;
+ }
+ .aboutPageContentLinkContainers {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+ }
+ .aboutPageContentLinkContainers a {
+   font-size: 60px;
+   text-decoration: none;
+   color: white;
+   background: rgba(30, 89, 191, 0.7);
+   font-weight: bolder;
+   padding: 5px;
+   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+
  }
