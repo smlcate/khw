@@ -98,6 +98,12 @@ body {
    min-width: 500px;
    display: flex;
  }
+ .aboutPageContentDivs {
+   width: 90vw;
+   height: 400px;
+   min-width: 500px;
+   display: flex;
+ }
  .aboutPageContentDivTextContainers {
    padding: 20px;
    display: flex;
@@ -116,6 +122,25 @@ body {
    justify-content: center;
    align-items: center;
    width: 50%;
+   /* border: 2px solid red; */
+ }
+
+ #aboutPageCustFurnLinkContainer {
+   display: flex;
+   justify-content: space-around;
+ }
+ #aboutPageCustFurnTextContainer {
+   justify-content:center;
+ }
+
+ #aboutPageCustFurnLinkContainer a {
+   font-size: 200%;
+   /* width: 230px; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(30, 89, 191, 0.7);
+   /* color: red; */
  }
  .aboutPageContentLinkContainers a {
    font-size: 60px;
