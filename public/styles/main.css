@@ -152,3 +152,40 @@ body {
    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 
  }
+ 
+ #storeMainPageDiv {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+ }
+ #storeCategoryDisplay {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+ }
+ .categoryCells {
+   width: 30%;
+   border: 1px solid black;
+   display: flex;
+   justify-content: center;
+ }
+ #storeSetDisplay {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+ }
+ .setCells {
+   width: 30%;
+   display: flex;
+ }
+ #storeFloorDisplay {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 80%;
+ }
+ .itemCells {
+   width: 30%;
+   display: flex;
+   flex-direction: column;
+ }

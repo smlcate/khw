@@ -11,4 +11,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: '../partials/home.html'
   })
+  .state('store', {
+      url: '/store',
+      templateUrl: '../partials/store.html'
+  })
 });

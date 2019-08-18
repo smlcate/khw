@@ -1,0 +1,34 @@
+<div class="mainPageDivs" id="storeMainPageDiv">
+  
+  <div class="" id="storeCategoryDisplay">
+    
+    <div class="categoryCells" ng-click="filterBy('all','cat')">
+      <h2>All Items</h2>
+    </div>
+    <div class="categoryCells" ng-repeat="c in categories" ng-click="filterBy(c.name,'cat')">
+      <h2>{{c.name}}</h2>
+    </div>
+    
+  </div>
+  
+  <div class="" id="storeSetDisplay">
+    <div class="setCells" ng-click="filterBy('all','set')">
+      <h2>All Sets</h2>
+    </div>
+    <div class="setCells" ng-repeat="s in sets track by $index" ng-click="filterBy(s,'set')">
+      <h2>{{s}}</h2>
+    </div>
+  </div>
+  
+  <div class="" id="storeFloorDisplay">
+    
+    <div class="itemCells" ng-repeat="i in storeFloor">
+      <h3>{{i.name}}</h3>
+      <h4>Category {{i.category}}</h4>
+      <h4>{{i.set}}</h4>
+      <p>x {{i.quantity}}</p>
+    </div>
+    
+  </div>
+  
+</div>
