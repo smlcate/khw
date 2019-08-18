@@ -103,6 +103,9 @@ body {
    height: 400px;
    min-width: 500px;
    display: flex;
+   margin-bottom: 20px;
+   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7);
+
  }
  .aboutPageContentDivTextContainers {
    padding: 20px;
@@ -124,13 +127,19 @@ body {
    width: 50%;
    /* border: 2px solid red; */
  }
-
+#aboutCustomFurniture {
+  background: url("../images/141-4272-Grove-Table-and-Ladderback-Chairs-SETTING-e1463501871984.jpg");
+  background-position:center;
+  background-size: cover;
+}
  #aboutPageCustFurnLinkContainer {
    display: flex;
    justify-content: space-around;
  }
  #aboutPageCustFurnTextContainer {
    justify-content:center;
+   background: rgba(97, 111, 137, 0.7);
+   font-size: 140%;
  }
 
  #aboutPageCustFurnLinkContainer a {
