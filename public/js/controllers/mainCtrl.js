@@ -1,9 +1,9 @@
 app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($scope, $http, $window, $compile) {
-  
+
   $scope.storeItems = [
     {
       name:'Rustic Chair',
-      category:'Dining Room',
+      room:'Dining Room',
       images:[],
       tags:['wood','chair','red','rustic'],
       set:'Super Set',
@@ -11,7 +11,7 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
     },
     {
       name:'Rustic Table',
-      category:'Dining Room',
+      room:'Dining Room',
       images:[],
       tags:['wood','table','red','rustic'],
       set:'Super Set',
@@ -19,7 +19,7 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
     },
     {
       name:'Modern Couch',
-      category:'Family Room',
+      room:'Family Room',
       images:[],
       tags:['wood','couch','grey','modern'],
       set:'Super Duper Set',
@@ -27,60 +27,65 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
     },
     {
       name:'Modern Arm Chair',
-      category:'Family Room',
+      room:'Family Room',
       images:[],
       tags:['wood','arm_chair','grey','modern'],
       set:'Super Duper Set',
       quantity:2
     }
   ];
-  
-  $scope.categories = [
-    {
-      name:'Family Room',
-      image:''
-    },
-    {
-      name:'Dining Room',
-      image:''
-    }
-  ];
-  
+
+
   $scope.floorLayout = {
-    cat:'all',
+    room:'all',
     set:'all'
   }
-  
+
   $scope.storeFloor = [];
   $scope.sets = [];
-  
+
   function buildStore() {
-    
+    for (var i = 0; i < $scope.storeItems.length; i++) {
+      // console.log($scope.storeItems[i].set);
+      if ($scope.sets.length) {
+        // var push = true;
+        for (var j = 0; j < $scope.sets.length; j++) {
+          if ($scope.sets[j] == $scope.storeItems[i].set) {
+            // push = false;
+          } else if(j == $scope.sets.length -1) {
+            $scope.sets.push($scope.storeItems[i].set);
+          }
+        }
+      } else {
+        $scope.sets.push($scope.storeItems[i].set);
+      }
+    }
   }
-  
+  buildStore();
+
   $scope.filterBy = function(f,t) {
-    
+
     $scope.storeFloor = [];
-    
+
     if (t == 'cat') {
-      
+
       $scope.floorLayout.set = 'all'
-      
+
       if (f == 'all') {
         $scope.floorLayout.cat = 'all'
         $scope.storeFloor = $scope.storeItems;
-        
+
       } else {
-        
+
         $scope.floorLayout.cat = f;
         for (var i = 0; i < $scope.storeItems.length; i++) {
           if (f == $scope.storeItems[i].category) {
             $scope.storeFloor.push($scope.storeItems[i])
           }
         }
-        
+
       }
-      
+
       $scope.sets = [];
       for (var i = 0; i < $scope.storeFloor.length; i++) {
         console.log('hit');
@@ -94,7 +99,7 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
               if (push == true) {
                 console.log('push');
                 $scope.sets.push($scope.storeFloor[i].set);
-              }      
+              }
             }
           }
         } else {
@@ -102,13 +107,13 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
           $scope.sets.push($scope.storeFloor[i].set);
         }
       }
-      
+
     } else if(t == 'set') {
-      
+
       $scope.floorLayout.set = t;
       $scope.storeFloor = [];
       var tempFloor = [];
-      
+
       for (var i = 0; i < $scope.storeItems.length; i++) {
         console.log('run');
         if ($scope.storeItems[i].category == $scope.floorLayout.cat && $scope.floorLayout.cat != 'all') {
@@ -133,9 +138,9 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
                   console.log('all categories');
                   $scope.storeFloor.push(tempFloor[j]);
                 }
-              } 
+              }
             }
-            
+
           } else {
             console.log('all sets');
             console.log(tempFloor);
@@ -143,12 +148,12 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
           }
         }
       }
-      
-      
-      
+
+
+
     }
-    
-    
+
+
   }
-  
+
 }]);

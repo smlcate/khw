@@ -1,16 +1,28 @@
 <div class="mainPageDivs" id="storeMainPageDiv">
-  
+
   <div class="" id="storeCategoryDisplay">
-    
+
     <div class="categoryCells" ng-click="filterBy('all','cat')">
       <h2>All Items</h2>
     </div>
-    <div class="categoryCells" ng-repeat="c in categories" ng-click="filterBy(c.name,'cat')">
-      <h2>{{c.name}}</h2>
+    <div class="categoryCells" ng-click="filterBy('living','cat')">
+      <h2>Living</h2>
     </div>
-    
+    <div class="categoryCells" ng-click="filterBy('bedroom','cat')">
+      <h2>Bedroom</h2>
+    </div>
+    <div class="categoryCells" ng-click="filterBy('dining','cat')">
+      <h2>Dining</h2>
+    </div>
+    <div class="categoryCells" ng-click="filterBy('kitchen','cat')">
+      <h2>Kitchen</h2>
+    </div>
+    <div class="categoryCells" ng-click="filterBy('outdoor','cat')">
+      <h2>Outdoor</h2>
+    </div>
+
   </div>
-  
+
   <div class="" id="storeSetDisplay">
     <div class="setCells" ng-click="filterBy('all','set')">
       <h2>All Sets</h2>
@@ -19,16 +31,16 @@
       <h2>{{s}}</h2>
     </div>
   </div>
-  
+
   <div class="" id="storeFloorDisplay">
-    
+
     <div class="itemCells" ng-repeat="i in storeFloor">
       <h3>{{i.name}}</h3>
       <h4>Category {{i.category}}</h4>
       <h4>{{i.set}}</h4>
       <p>x {{i.quantity}}</p>
     </div>
-    
+
   </div>
-  
+
 </div>
