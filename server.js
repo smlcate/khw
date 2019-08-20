@@ -10,13 +10,16 @@ var knex = require('./db/knex');
 // var bcrypt = require('bcrypt');
 
 var server = {
-  // events: require('./controllers/events.js'),
+  admin: require('./controllers/admin.js'),
 
 }
 
 app.use(express.static('public'));
 app.use(bodyParser.json({limit:1024*1024*20, type:'application/json'}));
 
+
+app.post('/newItem', server.admin.newItem);
+app.get('/getItems', server.admin.getItems);
 
 
 

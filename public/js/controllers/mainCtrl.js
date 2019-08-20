@@ -1,39 +1,6 @@
 app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($scope, $http, $window, $compile) {
 
-  $scope.storeItems = [
-    {
-      name:'Rustic Chair',
-      room:'Dining Room',
-      images:[],
-      tags:['wood','chair','red','rustic'],
-      set:'Super Set',
-      quantity:4
-    },
-    {
-      name:'Rustic Table',
-      room:'Dining Room',
-      images:[],
-      tags:['wood','table','red','rustic'],
-      set:'Super Set',
-      quantity:1
-    },
-    {
-      name:'Modern Couch',
-      room:'Family Room',
-      images:[],
-      tags:['wood','couch','grey','modern'],
-      set:'Super Duper Set',
-      quantity:1
-    },
-    {
-      name:'Modern Arm Chair',
-      room:'Family Room',
-      images:[],
-      tags:['wood','arm_chair','grey','modern'],
-      set:'Super Duper Set',
-      quantity:2
-    }
-  ];
+  $scope.storeItems = [];
 
 
   $scope.floorLayout = {
@@ -45,6 +12,23 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
   $scope.sets = [];
 
   function buildStore() {
+    
+    $http.get('/getItems')
+    .then(function(res) {
+      console.log(res.data);
+      var storeItems = res.data;
+      for (var i = 0; i < storeItems.length; i++) {
+        console.log('hit');
+        storeItems[i].images = JSON.parse(storeItems[i].images);
+        if (i == storeItems.length-1) {
+          console.log('hit 2');
+          $scope.storeItems = storeItems;
+          $scope.storeFloor = storeItems;
+          console.log($scope.storeFloor);
+        }
+      }
+    })
+    
     for (var i = 0; i < $scope.storeItems.length; i++) {
       // console.log($scope.storeItems[i].set);
       if ($scope.sets.length) {
@@ -67,19 +51,19 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', function($
 
     $scope.storeFloor = [];
 
-    if (t == 'cat') {
+    if (t == 'room') {
 
       $scope.floorLayout.set = 'all'
 
       if (f == 'all') {
-        $scope.floorLayout.cat = 'all'
+        $scope.floorLayout.room = 'all'
         $scope.storeFloor = $scope.storeItems;
 
       } else {
 
-        $scope.floorLayout.cat = f;
+        $scope.floorLayout.room = f;
         for (var i = 0; i < $scope.storeItems.length; i++) {
-          if (f == $scope.storeItems[i].category) {
+          if (f == $scope.storeItems[i].room) {
             $scope.storeFloor.push($scope.storeItems[i])
           }
         }

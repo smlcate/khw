@@ -1,0 +1,58 @@
+<div class="mainPageDivs" id="adminMainPageDiv" ng-controller="adminCtrl" >
+  
+  <div class="" id="adminControlDisplay">
+    <div class="adminControlDivs">
+      
+      <h2>Add Store Items</h2>
+      <span>
+        <p>Item Name</p>
+        <input type="text" name="" value="" ng-model="newItem.name">
+      </span>
+      <span>
+        <p>Room Type</p>
+        <input type="text" name="" value="" ng-model="newItem.room">
+      </span>
+      <span>
+        <p>Item Category</p>
+        <input type="text" name="" value="" ng-model="newItem.category">
+      </span>
+      <span>
+        <p>Item Set</p>
+        <input type="text" name="" value="" ng-model="newItem.set">
+      </span>
+      <span>
+        <p>Item Price</p>
+        <input type="number" name="" value="" ng-model="newItem.price">
+      </span>
+      <span>
+        <p>In Stock</p>
+        <input type="number" name="" value="" ng-model="newItem.stock">
+      </span>
+      <span>
+        <p>Description</p>
+        <textarea type="text" name="" value="" ng-model="newItem.description"></textarea>
+      </span>
+      <span>
+        <p>Tags (tag 1, tag 2, tag 3, etc..)</p>
+        <input type="text" name="" value="" ng-model="newItem.tags">
+      </span>
+      
+    </div>
+    <div class="adminControlDivs">
+      <span>
+        <p>Images</p> 
+        <div class="" id="adminImgPreviewDiv">
+          
+        </div>
+        <!-- <img src="{{img}}" alt="" ng-repeat="img in newItem.images"> -->
+        <input id="newItemImagesInput" type="file" multiple name="" value="" onchange="angular.element(this).scope().insertImages(event)"/>
+      </span>
+    </div>
+    
+  </div>
+  
+  <button type="button" name="button" ng-click="addItem()">Add</button>
+  
+
+  
+</div>

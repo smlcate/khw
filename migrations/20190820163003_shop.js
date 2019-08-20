@@ -1,6 +1,6 @@
 
 exports.up = function(knex) {
-  return knex.schema.createTable('stockItems', function(table) {
+  return knex.schema.createTable('store', function(table) {
     table.increments();
     table.string('name');
     table.string('description');
@@ -15,5 +15,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('stockItems');
+  return knex.schema.dropTable('store');
 };
