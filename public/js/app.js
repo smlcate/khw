@@ -15,4 +15,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/store',
       templateUrl: '../partials/store.html'
   })
+  .state('custFurn', {
+      url: '/customFurniture',
+      templateUrl: '../partials/customFurniture.html'
+  })
 });
